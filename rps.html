@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>RockPaperScissors</title>
+	</head>
+	<body>
+		<p>Choose one of the buttons.</p>
+		<button class="rock" 
+		onclick="
+		const comMove=comPick();
+		if(comMove ==='rock'){
+			alert('Computer choose rock , Its Draw!')
+		}else if(comMove === 'paper' ){
+			alert('computer choose paper , You lose!')
+		}else{
+			alert('computer choose scissors , You win!')
+		}">Rock</button>
+
+		<button class="paper" 
+		onclick="
+		const comMove=comPick();
+		if(comMove === 'rock'){
+			alert('Computer choose rock , You win!')
+		}else if(comMove === 'paper'){
+			alert('computer choose paper , Draw!')
+		}else{
+			alert('computer choose scissors , You lose!')
+		}">Paper</button>
+
+		<button  class="script" onclick="
+		const comMove=comPick();
+		if(comMove === 'rock'){
+			alert('Computer choose rock , You Win!')
+		}else if(comMove === 'paper'){
+			alert('computer choose paper , You Win!')
+		}else{
+			alert('computer choose scissors , Draw!')
+		}">Scissors</button>
+
+		<script>
+		function result(comMove, result){
+			alert(``)
+		}
+		function comPick(){
+		let randomNum=Math.random();
+		let computerPick='';
+
+		if (randomNum>=0 && randomNum<1/3){
+			computerPick='rock'
+		}
+		else if(randomNum >= 1/3 && randomNum < 2 / 3){
+
+			computerPick = 'paper'
+		}
+		else{
+			computerPick = 'scissors'
+		}
+		return computerPick;
+		}		
+
+		</script>
+	</body>
+</html>
